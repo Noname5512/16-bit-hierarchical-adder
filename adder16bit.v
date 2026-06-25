@@ -37,7 +37,7 @@ module adder16bit (a,b,cin,cout,sum,sign,zero,parity,overflow);
     assign overflow = (a[15]&b[15]&~sum[15]) | (~a[15]&~b[15]&sum[15]);
 
     rca a1 (cin,a[3:0],b[3:0],w[0],sum[3:0]);
-    rca a2 (cin,a[7:4],b[7:4],w[1],sum[7:4]);
-    rca a3 (cin,a[11:8],b[11:8],w[2],sum[11:8]);
-    rca a4 (cin,a[15:12],b[15:12],cout,sum[15:12]);
+    rca a2 (w[0],a[7:4],b[7:4],w[1],sum[7:4]);
+    rca a3 (w[1],a[11:8],b[11:8],w[2],sum[11:8]);
+    rca a4 (w[2],a[15:12],b[15:12],cout,sum[15:12]);
 endmodule

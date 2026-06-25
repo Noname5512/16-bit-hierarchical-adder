@@ -12,9 +12,10 @@ module tb_adder16bit
         $dumpfile("adder16bit.vcd");
         $dumpvars(0,tb_adder16bit);
         $monitor($time,"a=%h,b=%h,cin=%b,cout=%b,sum=%h,sign=%b,zero=%b,parity=%b,overflow=%b",a,b,cin,cout,sum,sign,zero,parity,overflow);
-        #5 a=16'h8fff ; b=16'h8000 ; cin = 0;
-        #5 a=16'hfffe ; b=16'h0002 ;
-        #5 a=16'haaaa ; b=16'h5555 ;
-        #5 $finish;
+        #5 a = 16'h0000; b = 16'h0000; cin = 0; // zero flag
+        #5 a = 16'hFFFF; b = 16'h0001; cin = 0; // carry out
+        #5 a = 16'h7FFF; b = 16'h0001; cin = 0; // positive overflow
+        #5 a = 16'h8000; b = 16'h8000; cin = 0; // negative overflow
+        #5 a = 16'hAAAA; b = 16'h5555; cin = 0; // alternating bits
     end
 endmodule
