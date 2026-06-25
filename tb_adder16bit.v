@@ -1,4 +1,3 @@
-`include "16bitadder.v"
 module tb_adder16bit
  ;
     reg [15:0] a,b;
