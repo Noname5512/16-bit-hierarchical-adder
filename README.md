@@ -138,17 +138,6 @@ This project demonstrates:
 * Testbench creation and simulation
 * Waveform-based debugging
 
-## Future Improvements
-
-Possible extensions include:
-
-* Carry Lookahead Adder (CLA)
-* Carry Select Adder (CSA)
-* 16-bit Arithmetic Logic Unit (ALU)
-* Parameterized N-bit Adder
-* Signed and unsigned operation support
-* Comprehensive self-checking testbench
-
 ## Author
 
 Built as a learning project to practice hierarchical Verilog design and digital hardware modeling.
